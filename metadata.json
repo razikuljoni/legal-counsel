@@ -1,0 +1,6 @@
+{
+  "name": "Vanguard & Sterling Legal Counsel",
+  "description": "Preeminent corporate and trial legal counsel specializing in mergers and acquisitions, high-stakes commercial litigation, intellectual property, and regulatory compliance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
