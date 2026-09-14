@@ -45,7 +45,7 @@ export default function ParallaxQuoteSection() {
           style={{ opacity }}
           className="font-heading text-2xl sm:text-3xl md:text-4xl font-semibold text-[#171717] leading-snug tracking-tight mb-8"
         >
-          "We do not measure legal excellence by procedural routine, but by the decisive resolution of existential corporate risk and the steadfast defense of our clients’ institutional reputation."
+          &quot;We do not measure legal excellence by procedural routine, but by the decisive resolution of existential corporate risk and the steadfast defense of our clients&apos; institutional reputation.&quot;
         </motion.blockquote>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6 border-t border-slate-200 text-xs text-slate-600 font-medium">

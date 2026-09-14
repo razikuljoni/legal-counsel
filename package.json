@@ -1,13 +1,16 @@
 {
-  "name": "ai-studio-applet",
-  "version": "0.1.0",
+  "name": "legal-counsel",
+  "version": "1.0.0",
+  "description": "Premium AI-assisted corporate & litigation legal counsel web platform built with Next.js 15, React 19, Tailwind CSS 4, and Gemini AI.",
   "private": true,
+  "author": "Legal Counsel Team",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "clean": "next clean"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

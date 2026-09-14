@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Briefcase,
@@ -427,9 +428,12 @@ export default function MasonryContentGrid({
               className="masonry-item p-6 rounded-md bg-white border border-slate-200 shadow-xs hover:border-slate-400 transition-all hover:shadow-md"
             >
               <div className="flex items-start gap-4 mb-4">
-                <img
+                <Image
                   src="https://picsum.photos/seed/attorney_marcus_sterling/200/200"
                   alt="Marcus Sterling, Senior Managing Partner"
+                  width={64}
+                  height={64}
+                  unoptimized
                   className="w-16 h-16 rounded-md object-cover border border-slate-300 shrink-0"
                 />
                 <div>
@@ -445,7 +449,7 @@ export default function MasonryContentGrid({
                 </div>
               </div>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                Over 28 years of lead trial experience before federal district judges and appellate benches. Named "Litigator of the Year" by American Lawyer for three consecutive cycles.
+                Over 28 years of lead trial experience before federal district judges and appellate benches. Named &quot;Litigator of the Year&quot; by American Lawyer for three consecutive cycles.
               </p>
               <div className="border-t border-slate-100 pt-3 mb-4 space-y-1 text-xs text-slate-700">
                 <div className="flex justify-between">
@@ -530,9 +534,12 @@ export default function MasonryContentGrid({
               className="masonry-item p-6 rounded-md bg-white border border-slate-200 shadow-xs hover:border-slate-400 transition-all hover:shadow-md"
             >
               <div className="flex items-start gap-4 mb-4">
-                <img
+                <Image
                   src="https://picsum.photos/seed/attorney_elena_vance/200/200"
                   alt="Elena Vance, Corporate Practice Chair"
+                  width={64}
+                  height={64}
+                  unoptimized
                   className="w-16 h-16 rounded-md object-cover border border-slate-300 shrink-0"
                 />
                 <div>
@@ -584,7 +591,7 @@ export default function MasonryContentGrid({
             >
               <MessageSquareQuote className="w-8 h-8 text-slate-500 mb-3" />
               <blockquote className="font-heading text-base sm:text-lg text-neutral-900 italic leading-snug mb-4">
-                "In our 40-year corporate history, we have never witnessed a trial team dismantle an opposing patent claim with such surgical, unrelenting precision. Vanguard &amp; Sterling saved our flagship enterprise product line."
+                &quot;In our 40-year corporate history, we have never witnessed a trial team dismantle an opposing patent claim with such surgical, unrelenting precision. Vanguard &amp; Sterling saved our flagship enterprise product line.&quot;
               </blockquote>
               <div className="border-t border-slate-300 pt-3 flex items-center justify-between">
                 <div>
@@ -669,7 +676,7 @@ export default function MasonryContentGrid({
                 Delaware Chancery Court Precedent: Director Liability in Autonomous AI Systems &amp; Risk Oversight
               </h3>
               <p className="font-sans-body text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
-                An executive analysis of recent *Caremark* duty-of-oversight claims addressing board governance, algorithmic hallucination liability, and IP training datasets.
+                An executive analysis of recent <em>Caremark</em> duty-of-oversight claims addressing board governance, algorithmic hallucination liability, and IP training datasets.
               </p>
               <div className="p-3 bg-slate-50 rounded border border-slate-200 text-xs text-slate-700 mb-4">
                 <strong>Key Takeaway:</strong> Board committees must maintain verified audit trails of proprietary data ingestion pipelines to shield directors against derivative litigation.

@@ -38,12 +38,12 @@ export default function ConsultationModal({
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isDone, setIsDone] = useState(false);
+  const [prevInitialMatter, setPrevInitialMatter] = useState(initialMatter);
 
-  useEffect(() => {
-    if (initialMatter) {
-      setFormData((prev) => ({ ...prev, matterTitle: initialMatter }));
-    }
-  }, [initialMatter]);
+  if (initialMatter !== prevInitialMatter) {
+    setPrevInitialMatter(initialMatter);
+    setFormData((prev) => ({ ...prev, matterTitle: initialMatter }));
+  }
 
   // Handle escape key
   useEffect(() => {

@@ -1,5 +1,28 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+import { Cinzel, Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
+
+const cinzel = Cinzel({
+  subsets: ['latin'],
+  variable: '--font-serif-title',
+  weight: ['500', '600', '700', '800', '900'],
+  display: 'swap',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-heading',
+  weight: ['400', '600', '700', '800'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Vanguard & Sterling Legal Counsel | Corporate, M&A & Trial Advocates',
@@ -27,7 +50,12 @@ export const metadata: Metadata = {
     title: 'Vanguard & Sterling Legal Counsel',
     description: 'Corporate, M&A, and high-stakes trial advocacy with tier-1 nationwide recognition.',
   },
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
   themeColor: '#171717',
 };
 
@@ -61,14 +89,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${cinzel.variable} ${playfair.variable} ${plusJakarta.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

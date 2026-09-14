@@ -35,6 +35,7 @@ export default function ContactSection({ prefilledMatter = '' }: ContactSectionP
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [matterRef, setMatterRef] = useState('');
 
   const validateForm = () => {
     const errs: Record<string, string> = {};
@@ -70,6 +71,7 @@ export default function ContactSection({ prefilledMatter = '' }: ContactSectionP
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setMatterRef(`VS-${Math.floor(100000 + Math.random() * 900000)}`);
     // Simulate swift server-side case evaluation intake
     setTimeout(() => {
       setIsSubmitting(false);
@@ -111,7 +113,7 @@ export default function ContactSection({ prefilledMatter = '' }: ContactSectionP
                   Evaluation Request Received
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-                  Your confidential inquiry has been routed to our Managing Partner desk under Matter Reference <strong className="font-mono text-neutral-900">#VS-{Math.floor(100000 + Math.random() * 900000)}</strong>. A senior partner will contact you directly within 2 business hours.
+                  Your confidential inquiry has been routed to our Managing Partner desk under Matter Reference <strong className="font-mono text-neutral-900">#{matterRef}</strong>. A senior partner will contact you directly within 2 business hours.
                 </p>
                 <div className="pt-4">
                   <button

@@ -13,19 +13,17 @@ export default function CustomCursor() {
   const [ringPosition, setRingPosition] = useState({ x: -100, y: -100 });
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(true);
+  const [isFinePointer, setIsFinePointer] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia('(pointer: fine)').matches;
+  });
 
   useEffect(() => {
-    // Check if device supports fine hover cursor
-    if (typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches) {
-      setIsTouchDevice(false);
-    } else {
-      return;
-    }
+    if (!isFinePointer) return;
 
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
-      if (!isVisible) setIsVisible(true);
+      setIsVisible(true);
 
       // Check if target is interactive
       const target = e.target as HTMLElement | null;
@@ -54,11 +52,11 @@ export default function CustomCursor() {
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('mouseenter', handleMouseEnter);
     };
-  }, [isVisible]);
+  }, [isFinePointer]);
 
   // Smooth ring follow effect with requestAnimationFrame
   useEffect(() => {
-    if (isTouchDevice) return;
+    if (!isFinePointer) return;
 
     let animationFrameId: number;
     const followCursor = () => {
@@ -75,9 +73,9 @@ export default function CustomCursor() {
 
     animationFrameId = requestAnimationFrame(followCursor);
     return () => cancelAnimationFrame(animationFrameId);
-  }, [position, isTouchDevice]);
+  }, [position, isFinePointer]);
 
-  if (isTouchDevice || !isVisible) return null;
+  if (!isFinePointer || !isVisible) return null;
 
   return (
     <>
