@@ -7,7 +7,7 @@ Ensure production environment variables are properly configured in your deployme
 | Variable Name | Required | Description | Sample Value |
 | :--- | :--- | :--- | :--- |
 | `GEMINI_API_KEY` | **Yes** | Google Gemini API key for AI feature activation | `AIzaSy...` |
-| `APP_URL` | **Yes** | Fully qualified URL of deployed application | `https://legalcounsel.com` |
+| `APP_URL` | **Yes** | Fully qualified URL of deployed application | `https://legal-counsel-indol.vercel.app` |
 | `NODE_ENV` | **Yes** | Environment target | `production` |
 
 ---

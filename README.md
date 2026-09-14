@@ -1,5 +1,6 @@
 # Legal Counsel AI — Premium Corporate & Litigation Legal Web Platform
 
+[![Deploy with Vercel](https://img.shields.io/badge/Vercel-Live_Deployment-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://legal-counsel-indol.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-15.4.9-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.js.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -7,6 +8,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 A modern, high-performance web platform designed for premier corporate legal counsel, litigation strategies, compliance management, and AI-powered legal document synthesis. Built with Next.js 15 App Router, React 19, Tailwind CSS v4, and Google Gemini AI integration.
+
+🌐 **Live Demo**: [https://legal-counsel-indol.vercel.app/](https://legal-counsel-indol.vercel.app/)
 
 ---
 

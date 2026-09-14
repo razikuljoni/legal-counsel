@@ -25,6 +25,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://legal-counsel-indol.vercel.app'),
   title: 'Vanguard & Sterling Legal Counsel | Corporate, M&A & Trial Advocates',
   description: 'Preeminent corporate and litigation legal practice. Delivering strategic counsel across Mergers & Acquisitions, High-Stakes Litigation, Intellectual Property, Regulatory Defense, and Capital Restructuring.',
   keywords: [
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     title: 'Vanguard & Sterling Legal Counsel | Corporate & Trial Advocates',
     description: 'Relentless advocacy, disciplined legal counsel, and over $1.8B in successful trial verdicts and closed transactions.',
     type: 'website',
-    url: 'https://vanguard-sterling.law',
+    url: 'https://legal-counsel-indol.vercel.app',
     siteName: 'Vanguard & Sterling Legal Counsel',
   },
   twitter: {
@@ -66,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: 'Vanguard & Sterling Legal Counsel',
     image: 'https://picsum.photos/seed/legal_firm_building/1200/800',
     description: 'Preeminent corporate and litigation legal practice specializing in M&A, commercial litigation, IP, white collar defense, and regulatory compliance.',
-    url: 'https://vanguard-sterling.law',
+    url: 'https://legal-counsel-indol.vercel.app',
     telephone: '+1-800-555-8373',
     email: 'counsel@vanguard-sterling.law',
     priceRange: '$$$$',
